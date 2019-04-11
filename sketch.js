@@ -1,10 +1,19 @@
 
-
-
-	var count = 0;
+var jibu;
+var hakiki;
+var par;
+var para;
+var count = 0;
+var storagee;
 
 function setup() {
 //	createCanvas(windowWidth, windowHeight);
+	par = createP('Question');
+	jibu = createInput("Answer");
+	par.hide();
+	jibu.hide();
+	para = createP('');
+	//count = 0;
 
 	questionAsked = select("#question");
 	answerGiven = select("#answer");
@@ -16,6 +25,13 @@ function setup() {
 	takeQuiz = select("#takeQuiz");
 	refreshPage = select("#refreshPage");
 
+	//createQuiz.hide();
+	//takeQuiz.hide();
+	//refreshPage.hide();
+
+	//storagee = createButton('STORAGEE...');
+//	storagee.mousePressed(updateStorageList);
+
 
 	//takeQuiz = createButton('NEXT...');
 //	takeQuiz.hide();
@@ -25,6 +41,7 @@ function setup() {
 
 	loadQuestion();
 	newQuiz();
+
 }
 
 function draw() {
@@ -42,6 +59,8 @@ function newQuestion() {
 
 	questionAsked.value('');
 	answerGiven.value('');
+
+	//refreshPage.show();
 
 }
 
@@ -68,31 +87,92 @@ function futaStorage() {
 }
 
 function fanyaMambo() {
+	par.show();
+	jibu.show();
 
 		var going = true;
+	//	var count = 0;
 
+		//para = createP('');
+		para.html('');
+		jibu.value('');
 
 	if (going && count < localStorage.length) {
+						//var kurasa = createP(localStorage.key(count));
+					//	var kurasa2 = createP(localStorage.getItem(key(count));
+						par.html(localStorage.key(count));
 
-						var kurasa = createP(localStorage.key(count));
-
-						createInput("Jibu swali");
-
-						createButton('ANSWER');
-
-						count++;
-
+					//	jibu = createInput("Jibu swali");
+					//	hakiki = createButton('SUBMITANSWER');
+					//	count++;
 		} else {
+						//pageReload();
 						createP("QUIZ OVER");
+						par.hide();
+						jibu.hide();
 						takeQuiz.hide();
 						//button3.hide();
 						//button4.hide();
 		}
 
+		count++;
+
+	// for (var i= 0; i< localStorage.length; i++) {
+	// 					var kurasa = createP(localStorage.key(i));
+	// 				//	var kurasa2 = createP(localStorage.getItem(key(count));
+	// 					jibu = createInput("Jibu swali");
+	// 					hakiki = createButton('SUBMITANSWER');
+	// 	}
+
+		jibu.changed (doSomething);
+		//jibu.input (doSomething);
 }
 
+
+function doSomething() {
+	para.html(jibu.value());
+
+	if (para.html() == localStorage.getItem(localStorage.key(count-1))) {
+		console.log ("SUCCESS");
+		//console.log (localStorage.getItem(localStorage.key(1)));
+	} else {
+		console.log("WRONG");
+		//console.log (localStorage.getItem(localStorage.key(1)));
+	}
+
+
+	jibu.value('');
+
+}
+
+
+function updateStorageList() {
+	par = createP('N');
+
+	for (var i = 0; i < localStorage.length; i++) {
+			createP(localStorage.key(i));
+			//createP('....');
+			createP(localStorage.getItem(localStorage.key(i)));
+
+	}
+
+		// if (localStorage.getItem(localStorage.key(i)) == localStorage.getItem(localStorage.value(i))) {
+		//
+		// }
+
+		if (par.html() == localStorage.getItem(localStorage.key(0))) {
+			console.log ("SUCCESS");
+			console.log (localStorage.getItem(localStorage.key(1)));
+		} else {
+			console.log("WRONG");
+			console.log (localStorage.getItem(localStorage.key(1)));
+		}
+
+		//console.log(localStorage.getItem(localStorage.key(i)));
+	}
+
+
+
 function pageReload() {
-
 	location.reload();
-
 }
