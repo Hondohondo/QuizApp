@@ -52,6 +52,8 @@ function draw() {
 
 function newQuestion() {
 
+if (questionAsked.value() != "" && answerGiven.value() != "") {
+
 	var key = questionAsked.value();
 	var value = answerGiven.value();
 
@@ -59,6 +61,14 @@ function newQuestion() {
 
 	questionAsked.value('');
 	answerGiven.value('');
+
+} else if (questionAsked.value() == "" || answerGiven.value() == "") {
+		alert ("Waoh! Don't leave any field empty!");
+}
+
+
+
+
 
 	//refreshPage.show();
 
@@ -132,7 +142,9 @@ function fanyaMambo() {
 function doSomething() {
 	para.html(jibu.value());
 
-	if (para.html() == localStorage.getItem(localStorage.key(count-1))) {
+
+
+	if (para.html().toUpperCase() == localStorage.getItem(localStorage.key(count-1)).toUpperCase()) {
 		console.log ("SUCCESS");
 		//console.log (localStorage.getItem(localStorage.key(1)));
 	} else {
