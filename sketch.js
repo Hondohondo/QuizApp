@@ -3,6 +3,7 @@ var jibu;
 var hakiki;
 var par;
 var para;
+var check;
 var count = 0;
 var storagee;
 
@@ -14,6 +15,7 @@ function setup() {
 	jibu.hide();
 	para = createP('');
 	//count = 0;
+	check = createP('');
 
 	questionAsked = select("#question");
 	answerGiven = select("#answer");
@@ -106,11 +108,15 @@ function fanyaMambo() {
 		//para = createP('');
 		para.html('');
 		jibu.value('');
+		jibu.class('jibu-input');
+
+		check.html('');
 
 	if (going && count < localStorage.length) {
 						//var kurasa = createP(localStorage.key(count));
 					//	var kurasa2 = createP(localStorage.getItem(key(count));
 						par.html(localStorage.key(count));
+						par.class('question-paragraph');
 
 					//	jibu = createInput("Jibu swali");
 					//	hakiki = createButton('SUBMITANSWER');
@@ -141,14 +147,23 @@ function fanyaMambo() {
 
 function doSomething() {
 	para.html(jibu.value());
+	para.class('jibu-paragraph');
 
 
 
 	if (para.html().toUpperCase() == localStorage.getItem(localStorage.key(count-1)).toUpperCase()) {
 		console.log ("SUCCESS");
+		//var check = createP("Correct!");
+		check.html("Correct!");
+		check.class('correct');
 		//console.log (localStorage.getItem(localStorage.key(1)));
 	} else {
+		//var check = createP("Wrong!");
+			// check.html("Wrong! " + "Answer is " + localStorage.getItem(localStorage.key(count-1)));
+			check.html("Wrong!");
+		check.class('wrong');
 		console.log("WRONG");
+		console.log("Answer is " + localStorage.getItem(localStorage.key(count-1)));
 		//console.log (localStorage.getItem(localStorage.key(1)));
 	}
 
