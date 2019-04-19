@@ -150,7 +150,6 @@ function doSomething() {
 	para.class('jibu-paragraph');
 
 
-
 	if (para.html().toUpperCase() == localStorage.getItem(localStorage.key(count-1)).toUpperCase()) {
 		console.log ("SUCCESS");
 		//var check = createP("Correct!");
