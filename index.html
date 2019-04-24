@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,8 +9,11 @@
 
 	<meta charset="UTF-8">
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans:100,300,400,600" rel="stylesheet" type="text/css">
-	<link href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" rel="stylesheet" type="text/css">
+
+	<!-- <link href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" rel="stylesheet" type="text/css"> -->
+
 	<link rel="stylesheet" href="ionicons.min.css">
+
 	<link type="text/css" rel="stylesheet" href="style.css">
 
 	<title>Simple Study Tool - Version 1.0</title>
@@ -20,48 +24,49 @@
 	<script src="sketch.js"></script>
 
 </head>
+
 <body>
+	<div class="wrapper clearfix">
 
-	<h1>Simple Study Tool - Version 1.0</h1>
+		<h1>Simple Study Tool - Version 1.0</h1>
 
-	<div class="chini">
-		<div class="entry">
-			<div class="entry__container">
-				<!-- <input type="text" class="add__description" placeholder="Add description">
+
+		<div class="container-button">
+				<button id="createQuiz" class="batan btn-new"><i class="icons ion-ios-plus-outline"></i>Create New Quiz</button>
+				<button id="takeQuiz" class="batan btn-roll"><i class="icons ion-ios-download-outline"></i>Take Your Quiz</button>
+				<button id="refreshPage" class="batan btn-hold"><i class="icons ion-ios-refresh-outline"></i>Reload Page</button>
+		</div>
+
+		<div class="chini">
+			<div class="entry">
+				<div class="entry__container">
+					<!-- <input type="text" class="add__description" placeholder="Add description">
         <input type="number" class="add__value" placeholder="Value">
         <button class="add__btn"><i class="ion-ios-checkmark-outline"></i></button> -->
 
-				<input type="text" class="entry__question" id="question" placeholder="Type your question"></input>
+					<input type="text" class="entry__question" id="question" placeholder="Type your question"></input>
 
-				<input type="text" class="entry__answer" id="answer" placeholder="Type your answer"></input>
+					<input type="text" class="entry__answer" id="answer" placeholder="Type your answer"></input>
 
-				<!-- <button class="entry__btn" id="submitEntry">SUBMIT ENTRY</button> -->
-				<button class="entry__btn" id="submitEntry"><i class="ion-ios-checkmark-outline"></i></button>
+					<!-- <button class="entry__btn" id="submitEntry">SUBMIT ENTRY</button> -->
+					<button class="entry__btn" id="submitEntry"><i class="ion-ios-checkmark-outline"></i></button>
+
+				</div>
 
 			</div>
 
 		</div>
 
+
+		<p id="output"></p>
+
+
+
+
+		<footer>
+			Built by Moses Nandi with <i class="ion-ios-heart"></i> and <i class="ion-coffee"></i>.
+		</footer>
 	</div>
-
-
-
-	<span></span>
-
-	<button id="createQuiz">CREATE a New Quiz</button>
-
-	<span></span>
-
-	<button id="takeQuiz">Take QUIZ</button>
-
-	<span></span>
-
-	<button id="refreshPage">Refresh/Reload</button>
-
-<p id="output"></p>
-
-<footer>
-	Built by Moses Nandi with <i class="ion-ios-heart"></i> and <i class="ion-coffee"></i>.
-</footer>
 </body>
+
 </html>

@@ -117,13 +117,15 @@ function fanyaMambo() {
 					//	var kurasa2 = createP(localStorage.getItem(key(count));
 						par.html(localStorage.key(count));
 						par.class('question-paragraph');
+						//par.parent('wrapper');
 
 					//	jibu = createInput("Jibu swali");
 					//	hakiki = createButton('SUBMITANSWER');
 					//	count++;
 		} else {
 						//pageReload();
-						createP("QUIZ OVER");
+						// createP("QUIZ OVER");
+						alert ("Quiz Over! No more questions. Press RELOAD PAGE to take the quiz again or Press CREATE NEW QUIZ to make a new quiz");
 						par.hide();
 						jibu.hide();
 						takeQuiz.hide();
@@ -158,8 +160,8 @@ function doSomething() {
 		//console.log (localStorage.getItem(localStorage.key(1)));
 	} else {
 		//var check = createP("Wrong!");
-			// check.html("Wrong! " + "Answer is " + localStorage.getItem(localStorage.key(count-1)));
-			check.html("Wrong!");
+			check.html("Wrong! " + "Answer is " + localStorage.getItem(localStorage.key(count-1)));
+			// check.html("Wrong!");
 		check.class('wrong');
 		console.log("WRONG");
 		console.log("Answer is " + localStorage.getItem(localStorage.key(count-1)));
