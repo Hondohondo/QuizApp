@@ -7,7 +7,16 @@ var hakiki;
 var count = 0;
 var storagee;
 
+var canvas;
+
+function windowResized() {
+	resizeCanvas(windowWidth,windowHeight);
+}
+
 function setup() {
+	canvas = createCanvas(windowWidth,windowHeight);
+	canvas.position(0,0);
+	canvas.style('z-index', '-1');
 
 	questionAsked = select("#question");
 	answerGiven = select("#answer");
@@ -53,6 +62,7 @@ function setup() {
 	incorrect.hide();
 
 	submitNext.mousePressed(fanyaMamboTena);
+	// takeQuiz.mousePressed(fanyaMamboTena);
 
 	correctZero = select('#current-0');
 	correctZero.hide();
@@ -66,8 +76,24 @@ function setup() {
 	correctBox2 = select('#box-two');
 	correctBox2.hide();
 
+	spanCode = select('#span-code');
+	spanCode.hide();
+
+	// background(175);
 
 
+}
+
+function draw() {
+
+	if(mouseIsPressed) {
+		line(pmouseX, pmouseY, mouseX, mouseY);
+	}
+
+}
+
+function keyPressed() {
+	clear();
 }
 
 function newQuestion() {
@@ -115,26 +141,18 @@ function futaStorage() {
 }
 
 function fanyaMambo() {
-	par.show();
-	jibu.show();
-	pressEnter.show();
-		submitNext.show();
-
-
 		var going = true;
 
-		// para.html('');
+		para.html('');
 		jibu.value('');
-		// jibu.class('jibu-input');
-		//
-		// check.html('');
-		// nextQuestion.show();
-		// takeQuiz.hide();
-
 
 	if (going && count < 1) {
+		par.show();
+		jibu.show();
+		pressEnter.show();
+		submitNext.show();
+		par.html(localStorage.key(count));
 
-						par.html(localStorage.key(count));
 						// par.class('question-paragraph');
 						// if (count == 1) {
 						// 	createQuiz.show();
@@ -143,17 +161,13 @@ function fanyaMambo() {
 						// }
 
 		} else {
-
-						count = 0;
-
+					count = 0;
 		}
-
 		count++;
-
-
 		jibu.changed (doSomething);
-}
+		takeQuiz.hide();
 
+}
 
 
 function fanyaMamboTena() {
@@ -167,6 +181,9 @@ function fanyaMamboTena() {
 
 		para.html('');
 		jibu.value('');
+		spanCode.hide();
+		correct.hide();
+		incorrect.hide();
 		// jibu.class('jibu-input');
 		//
 		// check.html('');
@@ -194,7 +211,7 @@ function fanyaMamboTena() {
 						submitNext.hide();
 						para.hide();
 						jibu.hide();
-						alert ("Quiz Over! No more questions. Press RELOAD PAGE to take the quiz again or Press CREATE NEW QUIZ to make a new quiz");
+						alert ("Quiz Over! No more questions. Press REFRESH to take the quiz again or Press NEW QUIZ to create a new quiz");
 
 						correctZero.hide();
 
@@ -256,6 +273,10 @@ function doSomething() {
 		correctBox2.show();
 		wrongZero.show();
 		wrongZero.html(wrongScore);
+
+		// spanCode.html("Yeees...")
+		spanCode.show();
+		spanCode.html("Answer is " + localStorage.getItem(localStorage.key(count-1)));
 
 
 

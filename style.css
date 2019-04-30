@@ -17,9 +17,9 @@
 }
 
 body {
-    background-image: linear-gradient(rgba(62, 20, 20, 0.4), rgba(62, 20, 20, 0.4)), url(back.jpg);
+    /* background-image: linear-gradient(rgba(62, 20, 20, 0.4), rgba(62, 20, 20, 0.4)), url(back.jpg);
     background-size: cover;
-    background-position: center;
+    background-position: center; */
     font-family: Lato;
     font-weight: 300;
     position: relative;
@@ -142,8 +142,8 @@ button.next__btn i {
   /* height: 100px; */
   /* box-shadow: 0px 10px 60px rgba(0, 0, 0, 0.10); */
   /* text-transform: uppercase; */
-  font-size: 20px;
-  font-weight: 400;
+  font-size: 18px;
+  /* font-weight: 100; */
   /* color: #28B9B5; */
   color: #555;
   text-align: center;
@@ -192,6 +192,52 @@ button.next__btn i {
   font-family: inherit;
 }
 
+.correct-answer {
+  position: absolute;
+  left: 50%;
+  top: 400px;
+  transform: translateX(-50%);
+  padding: 10px;
+  font-size: 18px;
+  /* font-weight: 100; */
+  text-align: center;
+  text-transform: uppercase;
+  margin-top: 10px;
+  color: #28B9B5;
+  font-family: inherit;
+
+}
+
+.wrong-answer {
+  position: absolute;
+  left: 50%;
+  top: 400px;
+  transform: translateX(-50%);
+  padding: 10px;
+  font-size: 18px;
+  /* font-weight: 100; */
+  text-align: center;
+  text-transform: uppercase;
+  margin-top: 10px;
+  color: #EB4D4D;
+  font-family: inherit;
+}
+
+span {
+  position: absolute;
+  left: 50%;
+  top: 425px;
+  transform: translateX(-50%);
+  padding: 10px;
+  font-size: 16px;
+  text-align: center;
+  margin-top: 10px;
+  color: #28B9B5;
+  font-family: inherit;
+  font-weight: 100;
+  text-decoration: underline;
+}
+
 
 /**********************************************
 *** PLAYERS
@@ -229,7 +275,25 @@ button.next__btn i {
 
 } */
 
-.player-current-box {
+/* .player-current-box {
+    background-color: #EB4D4D;
+    color: #fff;
+    width: 40%;
+    margin: 0 auto;
+    padding: 12px;
+    text-align: center;
+} */
+
+#box-one {
+    background-color: #28B9B5;
+    color: #fff;
+    width: 40%;
+    margin: 0 auto;
+    padding: 12px;
+    text-align: center;
+}
+
+#box-two {
     background-color: #EB4D4D;
     color: #fff;
     width: 40%;
@@ -251,7 +315,7 @@ button.next__btn i {
 
 button {
     position: absolute;
-    width: 200px;
+    /* width: 200px; */
     left: 50%;
     transform: translateX(-50%);
     color: #555;
@@ -273,7 +337,8 @@ button:focus {
 }
 
 i {
-    color: #EB4D4D;
+    /* color: #EB4D4D; */
+    color: #28B9B5;
     display: inline-block;
     margin-right: 15px;
     font-size: 32px;
@@ -306,3 +371,112 @@ i {
 
 .winner { background-color: #f7f7f7; }
 .winner .player-name { font-weight: 300; color: #EB4D4D; }
+
+
+/**********************************************
+*** FOOTER PART
+**********************************************/
+
+
+
+footer {
+  position: absolute;
+  width: 500px;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 690px;
+
+  font-family: 'Droid Serif', serif;
+  text-align: center;
+  font-size: 12px;
+  color: #686868;
+  /* margin-bottom: 30px;
+  margin-top: 30px; */
+      /* color: #F44336; heart*/
+          /* color: #795548; coffee*/
+}
+
+footer a {
+  text-decoration: none;
+  color: #28B9B5;
+}
+
+.ion-heart {
+    color: #F44336;
+    font-size: 16px;
+    margin-right: 0;
+    margin-top: -4px;
+}
+
+.ion-coffee {
+    color: #795548;
+    font-size: 16px;
+    margin-right: 0;
+    margin-top: -5px;
+}
+
+
+/**********************************************
+*** MODAL
+**********************************************/
+/* @keyframes slide {
+  from {
+    background-position: 0 0;
+  }
+
+  to {
+    background-position: -120px 60px;
+  }
+} */
+
+/* .modal {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: auto;
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1.6rem 3rem;
+  border: 3px solid black;
+  border-radius: 5px;
+  background: white;
+  box-shadow: 8px 8px 0 rgba(0, 0, 0, 0.2);
+}
+.message {
+  font-size:1.1rem;
+  margin-bottom: 1.6rem;
+  margin-top: 0;
+}
+.bton {
+  color:inherit;
+    font-family:inherit;
+  font-size: inherit;
+  background: white;
+  padding: 0.3rem 3.4rem;
+  border: 3px solid black;
+  margin-right: 2.6rem;
+  box-shadow: 0 0 0 black;
+  transition: all 0.2s;
+}
+
+.bton:last-child {
+  margin: 0;
+}
+
+.bton:hover {
+  box-shadow: 0.4rem 0.4rem 0 black;
+  transform: translate(-0.4rem, -0.4rem);
+}
+
+.bton:active {
+  box-shadow: 0 0 0 black;
+  transform: translate(0, 0);
+} */
+/*
+.options {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+} */
