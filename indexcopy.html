@@ -27,15 +27,57 @@
 
 </head>
 
+<!-- <body>
+	<div class="wrapper clearfix">
+
+		<h1>Simple Study Tool - Version 1.0</h1>
+
+
+		<div class="container-button">
+			<button id="createQuiz" class="batan btn-new"><i class="icons ion-ios-plus-outline"></i>Create New Quiz</button>
+			<button id="takeQuiz" class="batan btn-roll"><i class="icons ion-ios-download-outline"></i>Take Your Quiz</button>
+			<button id="refreshPage" class="batan btn-hold"><i class="icons ion-ios-refresh-outline"></i>Reload Page</button>
+		</div>
+
+
+
+		<div class="chini">
+			<div class="entry">
+				<div class="entry__container">
+
+
+					<input type="text" class="entry__question" id="question" placeholder="Type your question"></input>
+
+					<input type="text" class="entry__answer" id="answer" placeholder="Type your answer"></input>
+
+					<button class="entry__btn" id="submitEntry"><i class="ion-ios-checkmark-outline"></i></button>
+
+				</div>
+
+			</div>
+
+		</div>
+
+		<div class="next-btn-container">
+			<button id="nextQuestion" class="batan btn-next"><i class="icons ion-ios-download-outline"></i>Next Question</button>
+
+		</div>
+
+		<p id="output"></p>
+
+		<footer>
+			Built by Moses Nandi with <i class="ion-ios-heart"></i> and <i class="ion-coffee"></i>.
+		</footer>
+	</div>
+</body> -->
+
+
 <body>
 
 	<div class="wrapper clearfix">
 		<!-- <div class="player-name" id="name-0">Simple Study Tool - Version 1.0</div> -->
 
 		<div class="player-0-panel active">
-			<div class="entry">
-
-				</div>
 
 			<!-- <div class="player-name" id="name-0">Player 1</div> -->
 			<!-- <div class="player-name" id="name-0">Simple Study Tool - Version 1.0</div> -->
@@ -44,13 +86,13 @@
 			<div class="player-score" id="score-0">&nbsp;</div>
 
 
-			<div class="player-current-box" id="box-one">
+			<div class="player-current-box">
 				<!-- <div class="player-current-label">Current</div> -->
-				<!-- <div class="player-current-label">Correct</div> -->
+				<div class="player-current-label">Correct</div>
 				<!-- color-pig #EB4D4D // color budget #FF5049 -->
 
 
-				<div class="player-current-score" id="current-0">0</div>
+				<div class="player-current-score" id="current-0">11</div>
 			</div>
 		</div>
 
@@ -61,19 +103,18 @@
 
 			<input type="text" class="entry__answer" id="answer" placeholder="Type your answer"></input>
 
-			<button class="entry__btn" id="submitEntry"><i class="ion-ios-checkmark-outline"></i></button>
+			<!-- <button class="entry__btn" id="submitEntry"><i class="ion-ios-checkmark-outline"></i></button> -->
 			<!-- just position this properly -->
-			<button class="next__btn" id="submitNext"><i class="ion-ios-arrow-thin-right"></i></button>
 
 
 			<div class="player-score" id="score-1">&nbsp;</div>
 			<!-- <div class="player-score" id="score-1">72</div> -->
 
-			<div class="player-current-box" id="box-two">
+			<div class="player-current-box">
 				<!-- <div class="player-current-label">Current</div> -->
-				<!-- <div class="player-current-label">Wrong</div> -->
-				<div class="player-current-score" id="current-1">0</div>
-				<!-- <div class="player-current-score" id="current-1">&nbsp;</div> -->
+				<div class="player-current-label">Wrong</div>
+				<!-- <div class="player-current-score" id="current-1">0</div> -->
+				<div class="player-current-score" id="current-1">&nbsp;</div>
 			</div>
 		</div>
 
@@ -86,28 +127,9 @@
 		<!-- <button class="btn-hold"><i class="ion-ios-download-outline"></i>Hold</button> -->
 		<button id="refreshPage" class="batan btn-hold"><i class="icons ion-ios-refresh-outline"></i>Refresh</button>
 
-
 		<!-- <img src="dice-5.png" alt="Dice" class="dice"> -->
-		<p class="question-paragraph" id="par"></p>
-
-		<input class="jibu-paragraph" type="text" id="jibu" placeholder="Answer">
-		<p class="enter-answer" id="pressEnter">Press <em>Enter</em> after answering</p>
-		<p class="correct-answer" id="correct">Correct!</p>
-		<p class="wrong-answer" id="incorrect">Wrong! <span>Answer is </span></p>
-
-		<p class="para" id="para"></p>
-		<p class="check" id="check"></p>
-
-
-
 	</div>
 
-	<!-- <footer>
-		Built by Moses Nandi with <i class="ion-ios-heart"></i> and <i class="ion-coffee"></i>. | www.mosesnandi.com | mnandi19@jcu.edu
-		<p> Some favorite quaotation - maybe some random quotes for each day of the day etc </p>
-	</footer> -->
-
 </body>
-
 
 </html>
