@@ -16,6 +16,8 @@
     clear: both;
 }
 
+
+
 body {
     /* background-image: linear-gradient(rgba(62, 20, 20, 0.4), rgba(62, 20, 20, 0.4)), url(back.jpg);
     background-size: cover;
@@ -25,6 +27,10 @@ body {
     position: relative;
     height: 100vh;
     color: #555;
+}
+
+strong {
+  font-weight: bold;
 }
 
 .wrapper {
@@ -40,9 +46,10 @@ body {
 
 .player-0-panel,
 .player-1-panel {
+
     width: 50%;
     float: left;
-    height: 600px;
+    height: 620px;
     padding: 100px;
 }
 
@@ -376,15 +383,35 @@ i {
 /**********************************************
 *** FOOTER PART
 **********************************************/
+header {
+  position: absolute;
+  width: 1000px;
+  /* background-color: #f5f5f5; */
+  background-color: #28B9B5;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 0px;
+  padding: 5px;
 
+  font-family: 'Droid Serif', serif;
+  text-align: center;
+  font-size: 14px;
+  color: #fff;
+  /* margin-bottom: 30px;
+  margin-top: 30px; */
+      /* color: #F44336; heart*/
+          /* color: #795548; coffee*/
+}
 
 
 footer {
   position: absolute;
-  width: 500px;
+  width: 1000px;
+  background-color: #f5f5f5;
   left: 50%;
   transform: translateX(-50%);
-  top: 690px;
+  top: 600px;
+  padding: 5px;
 
   font-family: 'Droid Serif', serif;
   text-align: center;
@@ -403,16 +430,16 @@ footer a {
 
 .ion-heart {
     color: #F44336;
-    font-size: 16px;
+    font-size: 12px;
     margin-right: 0;
-    margin-top: -4px;
+    margin-top: -1.5px;
 }
 
 .ion-coffee {
     color: #795548;
-    font-size: 16px;
+    font-size: 12px;
     margin-right: 0;
-    margin-top: -5px;
+    margin-top: -2px;
 }
 
 

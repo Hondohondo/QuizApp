@@ -79,12 +79,17 @@ function setup() {
 	spanCode = select('#span-code');
 	spanCode.hide();
 
-	// background(175);
+	//background(175);
 
 
 }
 
 function draw() {
+
+//	background('#134E5E');
+// background: -webkit-linear-gradient(to right, #71B280, #134E5E);  /* Chrome 10-25, Safari 5.1-6 */
+// background: linear-gradient(to right, #71B280, #134E5E); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
 
 	if(mouseIsPressed) {
 		line(pmouseX, pmouseY, mouseX, mouseY);
